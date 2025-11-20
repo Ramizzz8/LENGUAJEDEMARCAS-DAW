@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript</title>
+    <style>
+      h1 {
+        color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Este es el blog mas epico de Rami</h1>
+      <main></main>
+      <footer>(c)Andres Ramirez 2025 papu</footer>
+    </header>
+    <div></div>
+    <script>
+      const articulos = [
+        'Primer articulo: Hola mundo',
+        'Segundo articulo: Aprendiendo JavaScript',
+        'Tercer articulo: Soy un blog epico',
+      ];
+      const contenedor = document.querySelector('main');
+      for (let i = 0; i < articulos.length; i++) {
+        contenedor.innerHTML += '<h3>' + articulos[i] + '</h3>';
+      }
+    </script>
+  </body>
+</html>
