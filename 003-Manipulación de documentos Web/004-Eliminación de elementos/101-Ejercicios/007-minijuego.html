@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <html>
+    <head>
+      <style>
+        #jugador {
+          width: 50px;
+          height: 50px;
+          background-color: red;
+          position: absolute;
+          top: 100px;
+          left: 100px;
+          transition: all 1s;
+        }
+      </style>
+    </head>
+    <body>
+      <div id="jugador"></div>
+      <script>
+        let temporizador = setTimeout('bucle()', 1000);
+        let posicionx = 100;
+        let posiciony = 100;
+        //llamo a la funcion desde dentro de la funcion
+        function bucle() {
+          posicionx += (Math.random() - 0.5) * 20;
+          posiciony += (Math.random() - 0.5) * 20;
+          document.querySelector('#jugador').style.left = Math.random() * 500 + 'px';
+          document.querySelector('#jugador').style.top = Math.random() * 500 + 'px';
+          clearTimeout(temporizador);
+          temporizador = setTimeout('bucle()', 1000);
+        }
+      </script>
+    </body>
+  </html>
+</html>
