@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Tienda</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+      }
+
+      header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+
+      section {
+        background: white;
+        margin-bottom: 2rem;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+
+      section h3 {
+        margin-bottom: 1.5rem;
+        color: #667eea;
+      }
+
+      #productos div {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      article {
+        background: #f9f9f9;
+        padding: 1.5rem;
+        border-radius: 6px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      article:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+      }
+
+      article h4 {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+
+      button {
+        background: #667eea;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+
+      button:hover {
+        background: #764ba2;
+      }
+
+      section > div:last-of-type {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      input {
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+
+      #enviar {
+        background: #667eea;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+
+      #enviar:hover {
+        background: #764ba2;
+      }
+
+      footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 1.5rem;
+        margin-top: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Tienda Online</h1>
+    </header>
+    <main>
+      <section id="productos">
+        <h3>Productos</h3>
+        <div>
+          <article>
+            <h4>Zapatillas</h4>
+            <button>30€</button>
+          </article>
+          <article>
+            <h4>Pantalones</h4>
+            <button>20€</button>
+          </article>
+          <article>
+            <h4>Camiseta</h4>
+            <button>40€</button>
+          </article>
+        </div>
+      </section>
+      <section>
+        <h3>Datos de cliente</h3>
+        <div>
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="text" id="direccion" placeholder="Apellidos">
+            <input type="text" id="email" placeholder="Email">
+            <div id="enviar">Enviar pedido</div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      (c) 2026 Andres Julian Ramirez
+    </footer>
+  </body>
+</html>
